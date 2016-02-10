@@ -1,5 +1,15 @@
-angular.module("domIntApp").controller("domIntCtrl", function(){
-
+angular.module("domIntApp").controller("domIntCtrl", function($scope, $timeout){
+  $scope.name = "Georgen";
+  $scope.search = {
+    name: ""
+  };
+  $scope.showHide = true;
+  $scope.style = {
+    background: "yellow"
+  };
+  $scope.clicker = function(){
+    $scope.style.background = "aqua";
+  }
   var listOfPeople = [
     {
       name: "Jeff",
@@ -17,5 +27,6 @@ angular.module("domIntApp").controller("domIntCtrl", function(){
       name: "Brianna",
       age: 46
     },
-  ]
+  ];
+  $scope.people = listOfPeople;
 })
